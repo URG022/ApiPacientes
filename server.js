@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Conexión de la Base de Datos 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("Conexión a MongoDB exitosa"))
   .catch(err => console.error("Error al Conectar a MongoDB: ", err));
 
